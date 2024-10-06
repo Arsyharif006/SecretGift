@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 1000px;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #8B4513;
+    transition: transform 1.5s;
+    cursor: pointer;
+}
+
+.door::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-door {
+    left: 0;
+    transform-origin: left;
+    border-right: 2px solid #4a2608;
+}
+
+.right-door {
+    right: 0;
+    transform-origin: right;
+    border-left: 2px solid #4a2608;
+}
+
+.left-door::after {
+    right: 20px;
+}
+
+.right-door::after {
+    left: 20px;
+}
+
+.open-left {
+    transform: rotateY(-90deg);
+}
+
+.open-right {
+    transform: rotateY(90deg);
+}
+
+#content-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none; /* Sembunyikan iframe pada awalnya */
+}
