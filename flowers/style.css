@@ -1007,7 +1007,7 @@ body {
 .text::after {
     content: '♥';
     position: absolute;
-    bottom: -10vh;
+    bottom: -22vh;
     left: 50%;
     transform: translateX(-50%);
     font-size: 5rem;
